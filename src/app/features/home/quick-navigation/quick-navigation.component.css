@@ -1,0 +1,119 @@
+.why-choose {
+  padding: 6rem 0;
+  background: var(--background-white);
+}
+
+.section-title {
+  color: var(--text-primary);
+  text-align: center;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.features-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: -60px; /* Negative gap to create overlap */
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: var(--surface);
+  padding: 2.5rem 2rem;
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -30px; /* Negative margin to create overlap */
+  position: relative;
+  z-index: 1;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:first-child {
+  margin-left: 0;
+  z-index: 1;
+}
+
+.feature-card:nth-child(2) {
+  z-index: 2;
+}
+
+.feature-card:nth-child(3) {
+  z-index: 3;
+}
+
+.feature-card:last-child {
+  z-index: 4;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  z-index: 10 !important;
+  border-color: var(--divider);
+}
+
+.check-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.checkmark {
+  color: var(--text-inverse);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.9375rem;
+  letter-spacing: -0.01em;
+  max-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    margin: 0 auto;
+    z-index: 1;
+  }
+  
+  .feature-card:first-child,
+  .feature-card:nth-child(2),
+  .feature-card:nth-child(3),
+  .feature-card:last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

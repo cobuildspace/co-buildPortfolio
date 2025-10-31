@@ -1,0 +1,22 @@
+.calendly-section {
+  padding: var(--spacing-2xl) 0;
+  background: var(--background-white);
+}
+
+.calendly-content {
+  text-align: center;
+}
+
+.calendly-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.calendly-description {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xl);
+}

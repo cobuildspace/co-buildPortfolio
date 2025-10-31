@@ -1,0 +1,18 @@
+<!-- Consultation Booking Section -->
+<section class="calendly-section">
+  <app-card [padding]="'large'">
+    <div class="calendly-content">
+      <h2 class="calendly-title">Contact Information</h2>
+      <p class="calendly-description">
+        Want to discuss your project in detail? Schedule a free 30-minute consultation with our team of experts. We'll help you understand how our solutions can benefit your business.
+      </p>
+      <app-button 
+        type="primary" 
+        size="medium" 
+        [fullWidth]="true"
+        (clicked)="onBookMeeting()">
+        Book a Meeting
+      </app-button>
+    </div>
+  </app-card>
+</section>

@@ -1,0 +1,92 @@
+.services {
+  padding: 6rem 0;
+  background: var(--background-white);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: var(--divider);
+}
+
+.service-icon {
+  width: 140px;  /* larger visual presence */
+  height: 140px; /* larger visual presence */
+  margin: 0 auto 1.5rem;
+  background: var(--background-light);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.chart-icon::before,
+.ai-icon::before,
+.data-icon::before {
+  font-size: 3.25rem;
+  line-height: 1;
+}
+
+/* If icons are provided as text inside the inner divs, scale them too */
+.service-icon .chart-icon,
+.service-icon .ai-icon,
+.service-icon .data-icon {
+  font-size: 3.25rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .service-icon {
+    width: 100px;
+    height: 100px;
+  }
+  .chart-icon::before,
+  .ai-icon::before,
+  .data-icon::before,
+  .service-icon .chart-icon,
+  .service-icon .ai-icon,
+  .service-icon .data-icon {
+    font-size: 2.5rem;
+  }
+}
+
+.chart-icon::before { content: '📊'; }
+.ai-icon::before { content: '🤖'; }
+.data-icon::before { content: '⚙️'; }
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.9375rem;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,28 @@
+.contact-page {
+  display: block;
+  background: var(--background-white);
+}
+
+.contact-content {
+  padding: var(--spacing-3xl) 0;
+  background: var(--background-white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

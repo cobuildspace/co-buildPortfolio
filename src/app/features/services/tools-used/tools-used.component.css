@@ -1,0 +1,144 @@
+.industries-section {
+  padding: var(--spacing-3xl) 0;
+  background: var(--background-white);
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.industry-card {
+  background: var(--surface);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+}
+
+.industry-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Industry Icons */
+.financial-icon,
+.crypto-icon,
+.gaming-icon,
+.healthcare-icon,
+.manufacturing-icon,
+.retail-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-blue-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-bold);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+  flex-shrink: 0;
+}
+
+.industry-card h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  margin: 0;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.industry-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.industry-features {
+  list-style: none;
+  margin-bottom: var(--spacing-lg);
+}
+
+.industry-features li {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  padding-left: var(--spacing-md);
+}
+
+.industry-features li::before {
+  content: '•';
+  color: var(--primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 992px) {
+  .industries-section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .industry-card {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .industries-section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .industry-card h3 {
+    font-size: var(--text-lg);
+  }
+
+  .industry-card p {
+    font-size: var(--text-sm);
+  }
+
+  .industry-features li {
+    font-size: 0.875rem;
+  }
+
+  .industry-icon {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .industry-card {
+    padding: var(--spacing-md);
+  }
+
+  .financial-icon,
+  .crypto-icon,
+  .gaming-icon,
+  .healthcare-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .industry-card h3 {
+    font-size: var(--text-base);
+  }
+}
+

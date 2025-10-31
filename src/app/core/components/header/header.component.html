@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/" class="logo-link">
+        <img src="/assets/images/cobuild-logo.svg" alt="Cobuild Services" class="logo-image">
+      </a>
+    </div>
+    <nav class="navigation" [class.mobile-menu-open]="mobileMenuOpen">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link" (click)="closeMobileMenu()">Home</a>
+      <a routerLink="/services" routerLinkActive="active" class="nav-link" (click)="closeMobileMenu()">Services</a>
+      <a routerLink="/portfolio" routerLinkActive="active" class="nav-link" (click)="closeMobileMenu()">Portfolio</a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-link" (click)="closeMobileMenu()">About Us</a>
+      <a routerLink="/contact" routerLinkActive="active" class="nav-link" (click)="closeMobileMenu()">Contact</a>
+      <button routerLink="/contact" class="contact-btn mobile-contact-btn" (click)="closeMobileMenu()">Contact Us</button>
+    </nav>
+    <button routerLink="/contact" class="contact-btn desktop-contact-btn">Contact Us</button>
+    <button class="mobile-menu-toggle" (click)="toggleMobileMenu()" [attr.aria-label]="mobileMenuOpen ? 'Close menu' : 'Open menu'">
+      <span class="hamburger" [class.open]="mobileMenuOpen"></span>
+    </button>
+  </div>
+</header>
