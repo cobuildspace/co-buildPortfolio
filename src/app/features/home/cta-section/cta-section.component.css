@@ -1,0 +1,28 @@
+.clients {
+  padding: 4rem 0;
+  background: var(--background-light);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.client-logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.logo-item {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.logo-item:hover {
+  opacity: 1;
+  color: var(--text-primary);
+}

@@ -1,0 +1,9 @@
+<button 
+  [class]="'btn btn-' + type + ' btn-' + size"
+  [class.btn-full-width]="fullWidth"
+  [disabled]="disabled"
+  (click)="onClick()">
+  <span *ngIf="icon && iconPosition === 'left'" class="btn-icon btn-icon-left">{{ icon }}</span>
+  <span class="btn-content"><ng-content></ng-content></span>
+  <span *ngIf="icon && iconPosition === 'right'" class="btn-icon btn-icon-right">{{ icon }}</span>
+</button>

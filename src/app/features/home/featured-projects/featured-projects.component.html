@@ -1,0 +1,20 @@
+<!-- FAQ Section -->
+<section class="faq">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-accordion">
+      @for (faq of faqs; track $index; let i = $index) {
+        <div class="faq-item" [class.active]="faq.isOpen">
+          <div class="faq-header" (click)="toggleFaq(i)">
+            <span class="faq-number">{{ i + 1 }}</span>
+            <h3>{{ faq.question }}</h3>
+            <span class="faq-toggle">{{ faq.isOpen ? '×' : '+' }}</span>
+          </div>
+          <div class="faq-content">
+            <p>{{ faq.answer }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

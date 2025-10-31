@@ -1,0 +1,45 @@
+/* Base Card Styles - Minimalistic */
+.card {
+  background: var(--surface);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card Variants */
+.card.default {
+  border: 1px solid var(--border);
+}
+
+.card.elevated {
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.card.outlined {
+  border: 1px solid var(--divider);
+}
+
+/* Card Padding */
+.card-padding-none {
+  padding: 0;
+}
+
+.card-padding-small {
+  padding: var(--spacing-md);
+}
+
+.card-padding-medium {
+  padding: var(--spacing-xl);
+}
+
+.card-padding-large {
+  padding: var(--spacing-2xl);
+}
+
+/* Hoverable */
+.card.hoverable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: var(--divider);
+}
+

@@ -1,0 +1,157 @@
+.our-services {
+  padding: var(--spacing-3xl) 0;
+  background: var(--background-light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 992px) {
+  .our-services {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .service-card {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .our-services {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .service-card h3 {
+    font-size: var(--text-lg);
+  }
+
+  .service-card p {
+    font-size: var(--text-sm);
+  }
+
+  .service-features li {
+    font-size: 0.875rem;
+  }
+
+  .service-icon {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    padding: var(--spacing-md);
+  }
+
+  .ai-brain-icon,
+  .blockchain-icon,
+  .trading-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .service-card h3 {
+    font-size: var(--text-base);
+  }
+}
+
+.service-card {
+  background: var(--surface);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+}
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Service Icons */
+.ai-brain-icon,
+.blockchain-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-blue-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-bold);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+  flex-shrink: 0;
+}
+
+.trading-icon,
+.data-icon,
+.analytics-icon,
+.mlops-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-blue-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-bold);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+  flex-shrink: 0;
+}
+
+.service-card h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  margin: 0;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.service-features {
+  list-style: none;
+  margin-bottom: var(--spacing-lg);
+}
+
+.service-features li {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  padding-left: var(--spacing-md);
+}
+
+.service-features li::before {
+  content: '•';
+  color: var(--primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
