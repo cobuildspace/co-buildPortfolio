@@ -6,13 +6,13 @@ export const routes: Routes = [
     path: '',
     loadComponent: () =>
       import('./features/home/home.component').then((m) => m.HomeComponent),
-    title: 'Home | Freelance Duo',
+    title: 'Home | CoBuild',
   },
   {
     path: 'about',
     loadComponent: () =>
       import('./features/about/about.component').then((m) => m.AboutComponent),
-    title: 'About Us | Freelance Duo',
+    title: 'About Us | CoBuild',
   },
   {
     path: 'services',
@@ -20,7 +20,7 @@ export const routes: Routes = [
       import('./features/services/services.component').then(
         (m) => m.ServicesComponent
       ),
-    title: 'Services | Freelance Duo',
+    title: 'Services | CoBuild',
   },
   {
     path: 'portfolio',
@@ -28,7 +28,7 @@ export const routes: Routes = [
       import('./features/portfolio/portfolio.component').then(
         (m) => m.PortfolioComponent
       ),
-    title: 'Portfolio | Freelance Duo',
+    title: 'Portfolio | CoBuild',
   },
   {
     path: 'testimonials',
@@ -36,7 +36,7 @@ export const routes: Routes = [
       import('./features/testimonials/testimonials.component').then(
         (m) => m.TestimonialsComponent
       ),
-    title: 'Testimonials | Freelance Duo',
+    title: 'Testimonials | CoBuild',
   },
   {
     path: 'contact',
@@ -44,7 +44,7 @@ export const routes: Routes = [
       import('./features/contact/contact.component').then(
         (m) => m.ContactComponent
       ),
-    title: 'Contact | Freelance Duo',
+    title: 'Contact | CoBuild',
   },
   {
     path: '**',
