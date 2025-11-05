@@ -36,21 +36,14 @@
   letter-spacing: -0.02em;
 }
 
-.footer-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.footer-links a {
+.footer-copyright {
   color: var(--text-muted);
-  text-decoration: none;
-  transition: color 0.2s ease;
   font-size: 0.9375rem;
   letter-spacing: -0.01em;
 }
 
-.footer-links a:hover {
-  color: var(--text-primary);
+.footer-copyright p {
+  margin: 0;
 }
 
 .fab {
